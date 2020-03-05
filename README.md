@@ -39,17 +39,20 @@ I would like to be receive formatted results as a string
 
 | Object      | Report |   |   |
 |-------------|:-:|--:|---|
-| Methods:    | format(results) |   |   |
+| Methods:    | print(formatted_results) | format(results) |   |
 
 
 ## <a name="Input_Output">Input & Output</a>
 
 | Input | Output |
 | ----- | ------ |
-| Input string: "Green, Green, Amber, Red, Green"
-  | Output string: "Green: 3\nAmber: 1\nRed: 1"
-   |
+| Input string: "Green, Green, Amber, Red, Green" | Output string: "Green: 3\nAmber: 1\nRed: 1" |
 
+"Green: 3\nAmber: 1\nRed: 1"
+Array item 1
+:
+/n
+Array item 2
 
 Edge cases: bad input - "Uncounted" appended to the back of string
 
