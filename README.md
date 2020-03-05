@@ -46,17 +46,17 @@ I would like to be receive formatted results as a string
 
 | Input | Output |
 | ----- | ------ |
-| Input string: "Green, Green, Amber, Red, Green" | Output string: "Green: 3\nAmber: 1\nRed: 1" |
+| "Green" | "Green: 1" |
+| "Green, Green" | "Green: 2" |
+| "Amber" | "Amber: 1" |
+| "Amber, Amber" | "Amber: 2" |
+| "Green, Amber" | "Green: 1\nAmber: 1" |
+| "Green, Amber, Red" | "Green: 1\nAmber: 1\nRed: 1" |
+| "Green, Green, Amber, Red, Green" | "Green: 3\nAmber: 1\nRed: 1" |
 
-"Green: 3\nAmber: 1\nRed: 1"
-Array item 1
-:
-/n
-Array item 2
-
-Edge cases: bad input - "Uncounted" appended to the back of string
-
-Formatting: first letter capitalised, overwise uncounted
+| "green, Green, Amber, Red, Green" | "Uncounted: 1\nGreen: 2\nAmber: 1\nRed: 1" |
+| "green, Green, Amber, Red, green" | "Green: 1\nAmber: 1\nRed: 1\nUncounted: 2" |
+| "blue, Green, Amber, Red, green" | "Uncounted: 2\Green: 1\nAmber: 1\nRed: 1" |
 
 ## <a name="Acceptance_Criteria">Acceptance Criteria</a>
 

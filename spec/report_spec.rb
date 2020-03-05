@@ -1,29 +1,33 @@
 require 'report'
 
 describe Report do
+  it 'formats "Green" to return "Green"' do
+    expect(subject.format("Green")).to eq "Green: 1"
+  end
 
-  describe '#format' do
-    it 'formats the inputed results' do
-      expect(subject.format("Green, Green, Amber, Red, Green")).to eq "Amber, Green, Green, Green, Red"
-    end
+  it 'formats "Green, Green" to return "Green: 2"' do
+    expect(subject.format("Green, Green")).to eq "Green: 2"
+  end
+
+  it 'formats "Amber" to return "Amber: 1"' do
+    expect(subject.format("Amber")).to eq "Amber: 1"
+  end
+
+  it 'formats "Amber, Amber" to return "Amber: 2"' do
+    expect(subject.format("Amber, Amber")).to eq "Amber: 2"
+  end
+
+  it 'formats "Green, Amber" to return "Green: 1\nAmber: 1"' do
+    expect(subject.format("Green, Amber" )).to eq "Green: 1\nAmber: 1"
+  end
+
+  it 'formats "Green, Amber, Red" to return "Green: 1\nAmber: 1\nRed: 1"' do
+    expect(subject.format("Green, Amber, Red")).to eq "Green: 1\nAmber: 1\nRed: 1"
+  end
+
+  it 'formats "Green, Green, Amber, Red, Green" to return "Green: 1\nAmber: 1\nRed: 1"' do
+    puts 
+    expect(subject.format("Green, Green, Amber, Red, Green")).to eq "Green: 3\nAmber: 1\nRed: 1"
+  end
     
-    it 'formats the inputed results based on the 3 points grading system' do
-      expect(subject.format("Green, Green, Amber, Red, Green")).to eq "Green: 3\nAmber: 1\nRed: 1"
-    end
-  end
-
-
-  describe '#print' do
-    # it 'returns a string' do
-    #   expect(subject.format()).to eq ""
-    # end
-
-    it 'returns a string' do
-      expect(subject.print("results")).to eq "results"
-    end
-
-    it 'takes in a formatted string of csv test results' do
-      expect(subject.print("Green, Green, Amber, Red, Green")).to eq "Green, Green, Amber, Red, Green"
-    end
-  end
 end
