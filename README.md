@@ -54,9 +54,9 @@ I would like to be receive formatted results as a string
 | "Green, Amber, Red" | "Green: 1\nAmber: 1\nRed: 1" |
 | "Green, Green, Amber, Red, Green" | "Green: 3\nAmber: 1\nRed: 1" |
 
-| "green, Green, Amber, Red, Green" | "Uncounted: 1\nGreen: 2\nAmber: 1\nRed: 1" |
+| "green, Green, Amber, Red, Green" | "Green: 2\nAmber: 1\nRed: 1\nUncounted: 1" |
 | "green, Green, Amber, Red, green" | "Green: 1\nAmber: 1\nRed: 1\nUncounted: 2" |
-| "blue, Green, Amber, Red, green" | "Uncounted: 2\Green: 1\nAmber: 1\nRed: 1" |
+| "blue, Green, Amber, Red, green" | "Green: 1\nAmber: 1\nRed: 1\nUncounted: 2\" |
 
 ## <a name="Acceptance_Criteria">Acceptance Criteria</a>
 

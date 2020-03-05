@@ -16,7 +16,7 @@ class Report
     if arr.include? "Red"
       output << "Red: #{arr.count("Red")}"
     end
-    
+        
     return output.join("\n")
   end
 end

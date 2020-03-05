@@ -26,8 +26,12 @@ describe Report do
   end
 
   it 'formats "Green, Green, Amber, Red, Green" to return "Green: 1\nAmber: 1\nRed: 1"' do
-    puts 
     expect(subject.format("Green, Green, Amber, Red, Green")).to eq "Green: 3\nAmber: 1\nRed: 1"
   end
+
+  it 'formats "green, Green, Amber, Red, Green" to return "Green: 1\nAmber: 1\nRed: 1"' do 
+    expect(subject.format("Green, Green, Amber, Red, Green")).to eq "Green: 3\nAmber: 1\nRed: 1"
+  end
+    
     
 end
